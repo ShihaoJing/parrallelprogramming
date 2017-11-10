@@ -7,7 +7,7 @@
 #include <unistd.h>
 #include "support.h"
 #include "shash2.h"
-//#include "tree.h"
+#include "tree.h"
 
 /// help() - Print a help message
 void help(char *progname) {
@@ -115,10 +115,10 @@ int main(int argc, char **argv) {
     long opt;
     // parameters
     unsigned keyrange = 256;
-    unsigned iters      = 100000;
+    unsigned iters      = 1000;
     unsigned buckets  = 16;
     unsigned ratio    = 80;
-    unsigned threads  = 10;
+    unsigned threads  = 1;
     unsigned ops      = 100;
     char test         = 'h';
 
@@ -152,8 +152,8 @@ int main(int argc, char **argv) {
     if (test == 'h') {
         bench<shash2>(keyrange, iters, buckets, ratio, threads, ops);
     }
-    /*else if (test == 't') {
+    else if (test == 't') {
         bench<tree>(keyrange, iters, buckets, ratio, threads, ops);
-    }*/
+    }
     exit(0);
 }
