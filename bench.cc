@@ -155,5 +155,6 @@ int main(int argc, char **argv) {
     else if (test == 's') {
         bench<shash>(keyrange, ops, buckets, ratio, threads);
     }
+
     exit(0);
 }

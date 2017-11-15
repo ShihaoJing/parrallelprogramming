@@ -29,4 +29,4 @@ add_executable(multibench multikeybench.cc
         team.cc
         shash2.h)
 
-add_executable(clist main.cpp rwlist.h)
+add_executable(main main.cpp rwlist.h)
